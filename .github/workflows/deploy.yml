@@ -26,26 +26,19 @@ jobs:
       - name: Validate and inject variables
         env:
           DISCORD_INVITE: ${{ vars.DISCORD_INVITE }}
+          FORGED_OS_URL: ${{ vars.FORGED_OS_URL }}
         run: |
           if [[ ! "$DISCORD_INVITE" =~ ^[A-Za-z0-9_-]+$ ]]; then
             echo "Error: DISCORD_INVITE is unset or contains invalid characters" >&2
             exit 1
           fi
-          if ! grep -qF "YOUR_DISCORD_INVITE" index.html; then
-            echo "Error: YOUR_DISCORD_INVITE placeholder not found in index.html" >&2
+          if [[ -z "$FORGED_OS_URL" ]]; then
+            echo "Error: FORGED_OS_URL is unset" >&2
             exit 1
           fi
           # index.html is a single self-contained file (inline CSS, CDN fonts, no local assets).
           rm -rf _site && mkdir _site
-          python3 -c "
-          import sys
-          invite = sys.argv[1]
-          with open('index.html', encoding='utf-8') as f:
-              content = f.read()
-          content = content.replace('YOUR_DISCORD_INVITE', 'https://discord.gg/' + invite)
-          with open('_site/index.html', 'w', encoding='utf-8') as f:
-              f.write(content)
-          " "$DISCORD_INVITE"
+          python3 scripts/inject.py "$DISCORD_INVITE" "$FORGED_OS_URL"
 
       - uses: actions/configure-pages@v5
 
