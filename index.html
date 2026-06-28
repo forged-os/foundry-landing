@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Foundry</title>
+  <meta name="description" content="A private circle building real things with AI. Show &amp; tell, pitch ideas, form cliqs. Free IP. No commitments.">
+  <meta property="og:title" content="The Foundry">
+  <meta property="og:description" content="A private circle building real things with AI. Show &amp; tell, pitch ideas, form cliqs. Free IP. No commitments.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #FAFAFA;
+      color: #0D0D0D;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* ─── Hero ─────────────────────────────────────── */
+    .hero { padding: 5.5rem 0 4.5rem; }
+
+    .brand {
+      display: block;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      color: #A84A00;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: clamp(1.875rem, 5vw, 2.75rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+
+    .hero-sub {
+      font-size: 1.0625rem;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+
+    /* ─── Button ────────────────────────────────────── */
+    .btn {
+      display: inline-block;
+      background: #A84A00;
+      color: #fff;
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 1.0625rem;
+      line-height: 1;
+      padding: 0.9rem 1.75rem;
+      text-decoration: none;
+      border-radius: 0;
+      transition: background 0.15s;
+    }
+    .btn:hover  { background: #8C3D00; }
+    .btn:focus-visible {
+      outline: 3px solid #A84A00;
+      outline-offset: 3px;
+    }
+
+    /* ─── Pillars ───────────────────────────────────── */
+    .pillars {
+      padding: 4rem 0;
+      border-top: 2px solid #A84A00;
+    }
+
+    .pillars-grid { display: grid; gap: 2.25rem; }
+
+    .pillar h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+    }
+
+    .pillar p {
+      color: #555;
+      font-size: 0.9375rem;
+      line-height: 1.65;
+    }
+
+    /* ─── Example ───────────────────────────────────── */
+    .example {
+      padding: 4rem 0;
+      border-top: 1px solid #DDD;
+    }
+
+    .section-label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #A84A00;
+      margin-bottom: 1rem;
+    }
+
+    .example h2 {
+      font-size: 1.375rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.625rem;
+    }
+
+    .example p {
+      color: #555;
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+    }
+
+    .link {
+      color: #A84A00;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .link:hover { color: #8C3D00; }
+
+    /* ─── Footer CTA ─────────────────────────────────── */
+    .footer-cta {
+      padding: 4rem 0 5.5rem;
+      border-top: 1px solid #DDD;
+      text-align: center;
+    }
+
+    .footer-tagline {
+      margin-top: 1.25rem;
+      color: #999;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+<main>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <span class="brand">The Foundry</span>
+      <h1>Where people build real things with AI.</h1>
+      <p class="hero-sub">
+        Show what you're making. Pitch ideas. Form a cliq.<br>
+        Free IP. No commitments.
+      </p>
+      <a href="YOUR_DISCORD_INVITE" class="btn" target="_blank" rel="noopener noreferrer">
+        Join on Discord →
+      </a>
+    </div>
+  </section>
+
+  <!-- Pillars -->
+  <section class="pillars" aria-label="What the Foundry is">
+    <div class="container">
+      <div class="pillars-grid">
+
+        <div class="pillar">
+          <h3>Show &amp; Tell</h3>
+          <p>What you built, what worked, what didn't. No hype.</p>
+        </div>
+
+        <div class="pillar">
+          <h3>Pitch &amp; Build</h3>
+          <p>Bring an idea. Form a cliq. Get fractional CTO involvement and a real stake in what the cliq creates together.</p>
+        </div>
+
+        <div class="pillar">
+          <h3>Builders meet business owners</h3>
+          <p>Small business owners find developers with real problems. Developers find real clients.</p>
+        </div>
+
+        <div class="pillar">
+          <h3>Free IP</h3>
+          <p>What you bring stays yours. The Foundry doesn't claim your existing work — it's a collaboration, not an acquihire.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Forged OS — featured example -->
+  <section class="example" aria-label="What the Foundry builds">
+    <div class="container">
+      <span class="section-label">What the Foundry builds together</span>
+      <h2>Forged OS</h2>
+      <p>
+        A collaborative investment research toolkit — built by the crew, for the crew.
+        Paper ledger, IVR screener, AI-assisted analysis. Human decisions always.
+      </p>
+      <a href="FORGED_OS_URL" class="link">See what we're building →</a>
+    </div>
+  </section>
+
+  <!-- Footer CTA -->
+  <section class="footer-cta" aria-label="Join">
+    <div class="container">
+      <a href="YOUR_DISCORD_INVITE" class="btn" target="_blank" rel="noopener noreferrer">
+        Join on Discord →
+      </a>
+      <p class="footer-tagline">The Foundry &nbsp;·&nbsp; Free IP &nbsp;·&nbsp; No commitments</p>
+    </div>
+  </section>
+
+</main>
+</body>
+</html>
